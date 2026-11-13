@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chaton roux 3D</title>
+<meta name="description" content="Un chaton roux en 3D, sculpté et peint uniquement par le code en WebGL 2.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%90%B1%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/main.css">
+</head>
+<body data-scene="plateforme">
+<canvas id="gl" tabindex="0" aria-label="Chaton roux en 3D. Flèches du clavier pour tourner, plus et moins pour zoomer."></canvas>
+
+<header class="id">
+  <h1>Chaton roux</h1>
+  <p>Modèle 3D sculpté et peint uniquement par code, en WebGL 2. Aucun fichier 3D, aucune image, aucune bibliothèque !!.</p>
+  <dl>
+    <dt>Robe</dt><dd>roux tigré et blanc</dd>
+    <dt>Yeux</dt><dd>bleu-gris</dd>
+    <dt>Maillage</dt><dd id="st-mesh">en cours</dd>
+    <dt>Pelage</dt><dd id="st-fur">en cours</dd>
+  </dl>
+</header>
+
+<details class="panel" id="panel" open>
+  <summary>Réglages</summary>
+  <div class="rows">
+    <fieldset class="seg">
+      <legend>Décor</legend>
+      <label><input type="radio" name="scene" id="scene-plateforme" value="plateforme" checked><span>Plateforme</span></label>
+      <label><input type="radio" name="scene" id="scene-studio" value="studio"><span>Studio photo</span></label>
+    </fieldset>
+    <div>
+      <label class="lab" for="shells">Couches de poils <output id="shells-out" for="shells">32</output></label>
+      <input type="range" id="shells" min="8" max="72" step="4" value="32">
+      <label class="check sub"><input type="checkbox" id="auto" checked> Ajuster selon la fluidité</label>
+    </div>
+    <div>
+      <label class="lab" for="len">Longueur du poil <output id="len-out" for="len">100 %</output></label>
+      <input type="range" id="len" min="40" max="160" step="5" value="100">
+    </div>
+    <label class="check"><input type="checkbox" id="fur" checked> Afficher le pelage</label>
+    <label class="check"><input type="checkbox" id="anim" checked> Animer la queue, le souffle, le regard</label>
+    <label class="check"><input type="checkbox" id="rot" checked> Rotation automatique</label>
+    <button type="button" id="reset">Recentrer la vue</button>
+  </div>
+</details>
+
+<p class="hint">Glisse pour tourner autour du chaton, molette ou pincement pour zoomer. Il suit ton curseur du regard.</p>
+<div class="loader" id="loader" role="status"><span id="loader-txt">Modelage du chaton</span><div class="bar"><i id="loader-bar"></i></div></div>
+
+<script type="module" src="src/main.js"></script>
+</body>
+</html>

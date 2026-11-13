@@ -1,0 +1,12 @@
+{
+  "name": "chaton-roux-3d",
+  "version": "1.0.0",
+  "description": "Un chaton roux en 3D, sculpté et peint uniquement par le code en WebGL 2.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "npx --yes serve ."
+  },
+  "keywords": ["webgl2", "3d", "fourrure", "sdf", "javascript"],
+  "license": "MIT"
+}
