@@ -1,6 +1,6 @@
 # Chaton roux 3D
 
-site web : https://alexmoriquand.github.io/website_3d_cat/
+site web : [https://alexmoriquand.github.io/website_3d_cat/](https://alexmoriquand.github.io/website_3d_cat/)
 
 Un chaton roux tigré en 3D, avec sa fourrure, qu'on peut faire tourner dans le navigateur. Il est **sculpté et peint uniquement par le code** : pas de fichier 3D, pas d'image, pas de bibliothèque. Juste du JavaScript et du WebGL 2.
 
